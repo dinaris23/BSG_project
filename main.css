@@ -99,6 +99,10 @@ body {
     background-size: contain;
     background-color: rgba(0, 51, 102, 0.9);
 }
+.content_block {
+    display: flex;
+    flex-direction: column;
+}
 .content_container {
     max-width: 1260px;
     margin: 0 auto;
@@ -165,4 +169,38 @@ body {
 }
 .nav_footer .nav_item:hover {
     background: transparent;
+}
+.nav_link:after {
+    display:block;
+    content:attr(title);
+    font-weight:bold;
+    height:1px;
+    color:transparent;
+    overflow:hidden;
+    visibility:hidden;
+    margin-bottom:-1px;
+}
+/*===============media quries================*/
+
+@media screen and (max-width: 900px) {
+    .logo {
+        width: 125px;
+        height: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .content_block {
+        flex-direction: row;
+    }
+    .content_row {
+        flex-direction: column;
+        margin-right: 30px;
+    }
+    .content_row:last-child {
+        margin-right: 0;
+    }
 }
