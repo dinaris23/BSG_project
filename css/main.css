@@ -278,7 +278,7 @@ body {
     .nav_footer {
         display: none;
     }
-    .logo {
+    .footer>.logo {
         margin-bottom: 50px;
     }
 }
